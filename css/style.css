@@ -19,14 +19,19 @@ nav,footer,header,aside{display: block;}
 html,body{
   height: 100%;
   width: 100%;
-  font-size: 100%;
   line-height: 1;
-   /*font-size: calc(8px + 10 * (100vw / 1280));*/
-   font-size: 16px;
+  font-size: 16px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+@media (max-width: 1700px) {
+html,body{
+  font-size: calc(8px + (16-8) * ((100vw - 320px) / (1700 - 320)));
+}
+}
+
 input,button,textarea{font-family: inherit;}
 
 input::-ms-clear{display: none;}
@@ -48,7 +53,7 @@ width: 100%;
 body{
   height: 100%;
   min-height: 100%;
-  font-family: RUSKOF;
+  width: 100%;
 }
 
 h1{
@@ -57,86 +62,92 @@ h1{
 }
 
 .wrapper{
+  display: flex;
   background-image: url(../jpg/wrapper.png);
+  height: 100%;
   min-height: 100%;
+  width: 100%;
   min-width: 100%;
   position: relative;
   overflow: auto;
 }
 header{
+  height: 7.5em;
+  width: 100%;
   display: flex;
   flex-direction: space-between;
   background-color: #231F20;
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 120px;
   /*calc(300px - 70 * (100vw / 1280));*/
-  outline: 2px solid #aa0;
+  outline: 2px solid #27599A;
   z-index: 15;
 }
 .namber{
-  position: absolute;
-  right: 3%; top: 0;
   height: 100%;
-  width: 220px;
+  width: 14em;
+  position: absolute;
+  right: 1em; top: 0;
 }
 
 .ki{
+  height: 50%;
+  width: 12em;
   display: flex;
   align-items: center;
-  width: 220px;
-  height: 50%;
-  font-size: 20px;
+  font-size: 1.25em;
   overflow: hidden;
   z-index: 30;
   /*outline: 2px solid #aa0;
   calc(300px - 70 * (100vw / 1280));*/
 }
 .mts{
+  height: 50%;
+  width: 12em;
   display: flex;
   align-items: center;
-  width: 220px;
-  height: 50%;
-  font-size: 20px;
+  font-size: 1.25em;
   overflow: hidden;
   z-index: 30;
   /*outline: 2px solid #a50;
   calc(300px - 70 * (100vw / 1280));*/
 }
 .ki img{
-  width: 35px;
-  height: 35px;
-  margin-right: 5px;
+  width: 1.5em;
+  height: 1.5em;
 }
 .ki span{
-  margin-right: 5px;
+  margin-right: 0.3em;
   color: #009CF9;
 }
 .ki a{
+  display: inline-block;
+  width: 10.5em;
   color: yellow;
   letter-spacing: 2px;
 }
 .mts img{
-  width: 35px;
-  height: 35px;
-  margin-right: 5px;
+  width: 1.5em;
+  height: 1.5em;
+
 }
 .mts span{
-  margin-right: 5px;
+  margin-right: 0.3em;
   color: #BC0216;
 }
 .mts a{
+  display: inline-block;
+  width: 10.5em;
   color: yellow;
   letter-spacing: 2px;
 }
 
 
 .logo{
-  background: url(../jpg/logo_taxi.png) round;
-  margin-left: 3%;
-  width: 350px;
   height: 100%;
+  width: 18em;
+  background: url(../jpg/logo_taxi.png) round;
+  margin-left: 1em;
   overflow: hidden;
 }
 
@@ -149,7 +160,7 @@ header{
   position: absolute;
   margin-top: 232px;
   left: 3%;
-  z-index: 15;
+  z-index: 20;
   /*transform: rotate(-1.5deg);
   margin-right: 1%;
   left: -35px; top: 300px;*/
@@ -168,41 +179,45 @@ text-decoration: underline;
 }
 
 .content{
-  background: url(../jpg/bac.jpg) center fixed;
+  background: url(../jpg/opel.jpg) center;
   background-repeat: no-repeat;
-  width: 100%;
+  background-size: cover;
+  width: 70%;
   height: 100%;
-  /*position: absolute;
-  left: 0; top: 0;*/
+  position: absolute;
+  left: 15%;
   z-index: 10;
 }
 
 .name{
+  width: 20em;
+  height: 6em;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  right: 3%; top: 120px;
-  border-radius: 0 0 0 50px;
-  width: 240px;
-  height: 100px;
+  right: 0; top: 7.5em;
+  border-radius: 0 0 0 3.1em;
   background-color: #231F20;
-  border: 2px solid #aa0;
-  opacity: 0.8;
-  z-index: 19;
+  border-left: 2px solid #27599A;
+  border-bottom: 2px solid #27599A;
+  z-index: 50;
   /*top: calc(300px - 70 * (100vw / 1280)); right: 0;*/
 }
 .name span{
   display: inline-block;
-  font-size: 45px;
+  margin-top: -0.8em;
+  margin-right: -1.5em;
+  letter-spacing: 0.43em;
+  font-size: 2.6em;
   color: yellow;
+  font-family: roboto;
 }
-
 
 footer{
   position: fixed;
   bottom: 0;
-  height: 100px;
+  height: 6.25em;
   width: 100%;
   background-color: aqua;
   z-index: 20;
@@ -214,12 +229,14 @@ footer{
   position: relative;
   display: flex;
 }
+
+
 .footer_rel p{
   display: block;
   position: absolute;
-  left: 3%; top: 10px;
+  left: 1em; top: 0.8em;
   width: 30%;
-  font-size: 16px;
+  font-size: 1em;
   color: #C8C8CA;
 }
 .footer_rel div div span{
@@ -228,16 +245,16 @@ margin-right: 3px;
 /*position: absolute;
 right: 15%; top: 8px;*/
 color: #C8C8CA;
-font-size: 17px;
+font-size: 1.1em;
 }
 .footer_rel div div{
   position: absolute;
-  right: 2%; top: 2px;
+  right: 1em; top: 1em;
 }
 .footer_rel div div a{
   display: block;
   color: #C8C8CA;
-  font-size: 17px;
+  font-size: 1em;
 }
 
 /*adaptive*/
