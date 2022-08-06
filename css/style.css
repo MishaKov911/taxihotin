@@ -63,7 +63,7 @@ h1{
 
 .wrapper{
   height: 100%;
-  min-height: 500px;
+  min-height: 800px;
   width: 100%;
   min-width: 100%;
   background: url(../jpg/opel.jpg) center/cover no-repeat;
@@ -76,7 +76,7 @@ header{
   width: 100%;
   display: flex;
   flex-direction: space-between;
-  background-color: #231f208e;
+  background-color: #231f20ab;
   position: fixed;
   top: 0;
   /*calc(300px - 70 * (100vw / 1280));*/
@@ -160,7 +160,6 @@ header{
   font-size: 5em;
   letter-spacing: 3px;
   color: #009CF9;
-
 }
 .post{
   display: inline-block;
@@ -188,17 +187,6 @@ header{
 color: #FCFBF4;
 text-decoration: underline;
 }
-
-.content{
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 70%;
-  height: 100%;
-  position: absolute;
-  left: 15%;
-  z-index: 10;
-}
-
 .name{
   width: 20em;
   height: 6em;
@@ -208,7 +196,7 @@ text-decoration: underline;
   position: fixed;
   right: 0; top: 7.5em;
   border-radius: 0 0 0 3.1em;
-  background-color: #231f208e;
+  background-color: #231f20ab;
   border-left: 2px solid #27599A;
   border-bottom: 2px solid #27599A;
   z-index: 50;
@@ -223,9 +211,18 @@ text-decoration: underline;
   color: #009CF9;
   font-family: roboto;
 }
+.content{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  left: 15%;
+  z-index: 10;
+}
 
 footer{
-  position: fixed;
+  position: absolute;
   bottom: 0;
   height: 5em;
   width: 100%;
@@ -238,32 +235,30 @@ footer{
   position: relative;
   display: flex;
 }
+  
 
-
-.footer_rel p{
-  display: block;
-  position: absolute;
-  left: 1em; top: 0.8em;
-  width: 30%;
-  font-size: 1em;
-  color: #C8C8CA;
-}
 .footer_rel div div span{
 display: inline-block;
 margin-right: 3px;
 /*position: absolute;
 right: 15%; top: 8px;*/
-color: #C8C8CA;
+color: #0fcc38;
 font-size: 1.1em;
+letter-spacing: 1.5px;
 }
-.footer_rel div div{
+.order{
+  width: 50%;
+  display: block;
   position: absolute;
-  right: 1em; top: 1em;
+  top: 50%;
+  left: 25%;
+  display: flex;
 }
 .footer_rel div div a{
   display: block;
-  color: #C8C8CA;
+  color: #0fcc38;
   font-size: 1em;
+  letter-spacing: 2px;
 }
 
 /*adaptive*/
