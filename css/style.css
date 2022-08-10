@@ -97,21 +97,21 @@ header{
 
 .ki{
   height: 1.25em;
-  width: 13.5em;
+  width: 14.1em;
   display: flex;
   font-size: 1.25em;
   z-index: 30;
-  border-right: 1px solid #243248;
+  border-right: 1px solid #253145;
   transform: matrix(1, 0, -0.3, 1, 0, 0);
 }
 .mts{
   height: 1.25em;
-  width: 13.5em;
+  width: 14.1em;
   display: flex;
   align-items: center;
   font-size: 1.25em;
   z-index: 30;
-  border-right: 1px solid #243248;
+  border-right: 1px solid #253145;
   transform: matrix(1, 0, -0.3, 1, 0, 0);
 }
 .ki img{
@@ -256,9 +256,9 @@ footer{
 
 .footer_rel .order span{
 display: inline-block;
-margin-right: 2px;
+margin-right: 11px;
 font-family: "ADV";
-color: #77b3cf;
+color: #b5c7cf;
 font-size: 0.6em;
 letter-spacing: 1.5px;
 }
@@ -268,18 +268,20 @@ letter-spacing: 1.5px;
   display: flex;
   align-items: center;
 }
-
+.order div{
+  display: flex;
+  margin-right: 7px;
+}
 .order img{
-height: 1.1em;
-width: 1.1em;
+height: 0.5em;
+width: 0.5em;
 margin: 0px 4px 0px 0px;
 }
 
 .order a{
   display: block;
-  margin: 3px 4px 0px 4px;
   font-family: "ADV";
-  color: #77b3cf;
+  color: #b5c7cf;
   font-size: 0.5em;
   letter-spacing: 1px;
 }
