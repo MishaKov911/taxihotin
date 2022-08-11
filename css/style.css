@@ -77,12 +77,10 @@ header{
   height: 7.5em;
   width: 100%;
   display: flex;
-  flex-direction: space-between;
   align-items: center;
   background-color: #231f20bb;
   position: fixed;
   top: 0;
-  /*calc(300px - 70 * (100vw / 1280));*/
   outline: 2px solid #27599A;
   z-index: 15;
 }
@@ -172,35 +170,6 @@ header{
   color: #009CF9;
 }
 
-
-.post{
-  display: inline-block;
-  /*background-image: url(../jpg/post.png);
-  background-repeat: round;*/
-  height: 7rem;
-  width: 16rem;
-  position: absolute;
-  margin-top: 232px;
-  left: 3%;
-  z-index: 20;
-  /*transform: rotate(-1.5deg);
-  margin-right: 1%;
-  left: -35px; top: 300px;*/
-}
-.post a{
-  display: inline-block;
-  font-size: 18px;
-  font-style: italic;
-  color: #BEBDB8;
-  margin-top: 70px;
-  transform: rotate(-1deg);
-}
-.post a:hover{
-color: #FCFBF4;
-text-decoration: underline;
-}
-
-
 .name{
   width: 25em;
   height: 6em;
@@ -215,7 +184,6 @@ text-decoration: underline;
   border-left: 2px solid #27599A;
   border-bottom: 2px solid #27599A;
   z-index: 50;
-  /*top: calc(300px - 70 * (100vw / 1280)); right: 0;*/
 }
 .name span{
   display: block;
@@ -226,14 +194,29 @@ text-decoration: underline;
   font-weight: 600;
   color: #009CF9;
 }
+
 .content{
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 70%;
-  height: 100%;
+  width: 19em;
+  height: 3.8em;
   position: absolute;
-  left: 15%;
+  right: -1em;
+  top: 13.5em;
+  border-radius: 0 0 0 0.9em;
+  transform: matrix(1, 0, -0.08, 1, 0, 0);
+  background-color: #2d3d53be;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.content span{
+  margin-top: -3px;
+  letter-spacing: 0.1em;
+  word-spacing: 0.1em;
+  font-size: 1em;
+  text-shadow: 1px 1px 1px #1b054e;
+  color: #f38824;
 }
 
 footer{
@@ -273,6 +256,7 @@ letter-spacing: 1.5px;
   margin-right: 7px;
 }
 .order img{
+height: 100%;
 height: 0.5em;
 width: 0.5em;
 margin: 0px 4px 0px 0px;
@@ -285,10 +269,3 @@ margin: 0px 4px 0px 0px;
   font-size: 0.5em;
   letter-spacing: 1px;
 }
-/*adaptive*/
-
-/*@media (max-width: 767px) {h1{font-size: calc(7px + (15 + 15 * 0.7) * ((100vw - 320) / 1280));}}*/
-/*html body{font-size: calc(7px + 15 * (100vw / 1280));}*/
-
-
-/*adaptive*/
