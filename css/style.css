@@ -66,11 +66,6 @@ body{
   font-family: "AcademyCTT_Bold";
   overflow: auto;
 }
-@media (orientation: landscape) {
-  .wrapper{
-  min-height: 770px;
-  }
-}
 
 header{
   height: 4.5em;
@@ -80,7 +75,7 @@ header{
   background-color: #17162c80;
   position: fixed;
   top: 0;
-  z-index: 15;
+  z-index: 90;
 }
 .namber{
   height: 3.5em;
@@ -186,17 +181,9 @@ header{
 }
 
 .content{
-  width: 19em;
-  height: 3.3em;
-  transform: matrix(1, 0, -0.15, 1, 0, 0);
+  height: max-content;
   background-color: #4f85ccbe;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 1em;
-  padding: 8px;
-  margin-left: 2em;
+  padding: 6px;
 }
 .content span{
   letter-spacing: 0.15em;
@@ -204,29 +191,26 @@ header{
   font-size: 1.1em;
   font-style: italic;
   color: #070527;
-  font-weight: 700;
 }
 h2{
-  margin-top: -3px;
   letter-spacing: 0.15em; 
   word-spacing: 0.1em;
   font-size: 1.1em;
   font-style: italic;
   color: #070527;
-  font-weight: 700;
 }
 
 
 .shell-connnection-map{
   height: 25em;
   width: 100%;
-  position: sticky;
+  position: absolute;
   top: 11em; left: 0;
   background-color: #22232498;
 }
 .connection{
-  height: 23em;
-  width: 26em;
+  height: 19em;
+  width: 15em;
   position: absolute;
   top: 1em;
   left: 0px;
@@ -243,22 +227,17 @@ h2{
 }
 .map{
   height: 23em;
-  width: 26em;
+  width: 70%;
   position: absolute;
   right: 0; bottom: 1em;
   opacity: 0.95;
-  box-shadow: 0px 0px 3px 2px #004568;
-}
-@media (max-width: 600px) {
-  .map{
-  height: 32em;
-  width: 100%;
-  }
+  box-shadow: 0px 0px 2px 1px #31578a;
 }
 
+
 .title{
-  height: 4em;
-  width: 26em;
+  height: 3em;
+  width: 15em;
   display: flex;
   align-items: center;
   background: #3C567E;
@@ -267,17 +246,22 @@ h2{
 h1{
   margin-left: 1em;
   font-family: "ADV";
-  font-size: 2em;
+  font-size: 1.5em;
   text-shadow: -2px 2px 2px #1d2641;
   color: #fff;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
 }
 
 .phone-buttons{
+  width: fit-content;
+  height: 3.4em;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .shell-green-button{
   height: 1.5em;
+  width: max-content;
   margin-left: 1em;
   background: rgb(197,224,197);
   background: linear-gradient(-170deg, rgba(197,224,197,0.8911939775910365) 0%, rgba(18,214,28,1) 14%, rgba(12,134,5,1) 100%);
@@ -359,15 +343,76 @@ margin: 0px 4px 0px 0px;
   letter-spacing: 1px;
 }
 
-@media (max-width: 600px) or (max-height: 740px) {
+@media (max-width: 750px) or (max-height: 940px) {
+  header{
+    position: absolute;
+  }
+  .name{
+    position: absolute;
+  }
   .wrapper{
     min-height: 75em;
     }
   .shell-connnection-map{
-    height: 60em;
+    height: 49em;
+    position: absolute;
+    top: 18em; left: 0;
   }
   .map{
-    height: 23em;
     width: 100%;
+ }
+ .connection{
+  height: 23em;
+  width: 26em;
+}
+.title{
+  height: 4em;
+  width: 26em;
+  display: flex;
+  align-items: center;
+  background: #3C567E;
+  background: linear-gradient(-29deg, rgba(64, 95, 131, 0.63) 0%, rgba(18, 35, 46, 0.575) 100%);
+}
+h1{
+  margin-left: 1em;
+  font-family: "ADV";
+  font-size: 2em;
+  text-shadow: -2px 2px 2px #1d2641;
+  color: #fff;
+  letter-spacing: 0.2em;
+}
+.phone-buttons{
+  display: flex;
+  flex-direction: row;
+}
+.content{
+  width: 19em;
+  height: 3.3em;
+  transform: matrix(1, 0, -0.15, 1, 0, 0);
+  background-color: #4f85ccbe;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 1em;
+  padding: 8px;
+  margin-left: 2em;
+}
+.content span{
+  letter-spacing: 0.15em;
+  word-spacing: 0.1em;
+  font-size: 1.1em;
+  font-style: italic;
+  color: #070527;
+  font-weight: 700;
+}
+h2{
+  margin-top: -3px;
+  letter-spacing: 0.15em; 
+  word-spacing: 0.1em;
+  font-size: 1.1em;
+  font-style: italic;
+  color: #070527;
+  font-weight: 700;
 }
 }
