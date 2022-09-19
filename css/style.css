@@ -64,7 +64,7 @@ body{
   display: flex;
   position: relative;
   font-family: "AcademyCTT_Bold";
-  overflow: auto;
+  overflow: hidden;
 }
 
 header{
@@ -255,6 +255,7 @@ h1{
 .phone-buttons{
   width: fit-content;
   height: 3.4em;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -262,7 +263,6 @@ h1{
 .shell-green-button{
   height: 1.5em;
   width: max-content;
-  margin-left: 1em;
   background: rgb(197,224,197);
   background: linear-gradient(-170deg, rgba(197,224,197,0.8911939775910365) 0%, rgba(18,214,28,1) 14%, rgba(12,134,5,1) 100%);
   border-radius: 1.5em;
@@ -344,24 +344,24 @@ margin: 0px 4px 0px 0px;
 }
 
 @media (max-width: 750px) or (max-height: 740px) {
-  header{
-    position: absolute;
-  }
-  .name{
-    position: absolute;
-  }
-  .wrapper{
-    min-height: 75em;
-    }
-  .shell-connnection-map{
-    height: 49em;
-    position: absolute;
-    top: 18em; left: 0;
-  }
-  .map{
-    width: 100%;
+header{
+  position: absolute;
  }
- .connection{
+.name{
+  position: absolute;
+ }
+.wrapper{
+  min-height: 75em;
+}
+.shell-connnection-map{
+  height: 49em;
+  position: absolute;
+  top: 18em; left: 0;
+}
+.map{
+  width: 100%;
+}
+.connection{
   height: 23em;
   width: 26em;
 }
@@ -414,5 +414,10 @@ h2{
   font-style: italic;
   color: #070527;
   font-weight: 700;
+}
+.shell-green-button{
+  margin-left: 0.5em;
+}
+.shell-green-button a{
 }
 }
