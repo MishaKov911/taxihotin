@@ -344,7 +344,7 @@ margin: 0px 4px 0px 0px;
   letter-spacing: 1px;
 }
 
-@media (max-width: 750px) or (max-height: 740px) {
+@media (max-width: 750px) , (max-height: 740px) {
 header{
   position: absolute;
  }
