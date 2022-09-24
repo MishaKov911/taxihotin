@@ -55,7 +55,6 @@ body{
 }
 
 .wrapper{
-  height: 55em;
   min-height: 100%;
   width: 100%;
   min-width: 100%;
@@ -206,7 +205,7 @@ h2{
 }
 
 main{
-  flex: 1 0 auto;
+  flex: 1 0 100%;
   position: relative;
 }
 .shell-connnection-map{
