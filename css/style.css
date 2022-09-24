@@ -207,7 +207,7 @@ h2{
 
 main{
   flex: 1 0 auto;
-  padding-bottom: 6em;
+  position: relative;
 }
 .shell-connnection-map{
   height: 25em;
@@ -309,6 +309,8 @@ footer{
   height: 3em;
   min-height: 3em;
   width: 100%;
+  position: absolute;
+  bottom: 0; left: 0;
 }
 .footer_rel{
   background-color: #231f20c7;
